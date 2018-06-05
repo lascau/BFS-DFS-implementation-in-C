@@ -1,11 +1,9 @@
-///\file random_generator.c
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include "graph_traversals.h"
 #include "random_generator.h"
 
-/// a function that generates a random adjacency matrix
 void random_generate_graph(struct a_graph *graph){
     const int max_no_nodes = 5;
     int iterator_rows;
