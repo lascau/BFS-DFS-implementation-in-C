@@ -1,0 +1,27 @@
+# I am a comment, and I want to say that the variable CC will be
+# the compiler to use.
+CC=gcc
+# Hey!, I am comment number 2. I want to say that CFLAGS will be the
+# options I'll pass to the compiler.
+# -c = compilation
+# -Wall = throws all warnings
+CFLAGS=-c -Wall
+
+all: exe
+
+exe: main.o .o BFS.o DFS.o random_generator.o
+	$(CC) main.o BFS.o DFS.o random_generator.o -o exe
+
+main.o: main.c
+	$(CC) $(CFLAGS) main.c
+
+BFS.o: BFS.c
+	$(CC) $(CFLAGS) BFS.c
+
+DFS.o: DFS.c
+	$(CC) $(CFLAGS) DFS.c
+
+random_generator.o: random_generator.c
+	$(CC) $(CFLAGS) random_generator.c
+clean:
+	rm *o exe
