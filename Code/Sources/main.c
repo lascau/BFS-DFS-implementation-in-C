@@ -1,12 +1,9 @@
-///\file main.c
 #include <stdio.h>
 #include <stdlib.h>
 #include "graph_traversals.h"
 #include "random_generator.h"
 
 void read_adj_matrix(struct a_graph *graph){
-     ///\brief a function that reads the adjacency matrix from a file
-     ///\param struct a_graph *graph is a pointer to a structure which contains the number of nodes, the adjacency matrix and a list of visited nodes
     int iterator_rows;
     int iterator_columns;
     FILE *file_in;
@@ -24,9 +21,6 @@ void read_adj_matrix(struct a_graph *graph){
 }
 
 int no_connected_components(struct a_graph *graph){
-    ///\brief a function that returns the number of connected components in a given graph
-    ///\param struct a_graph *graph is a pointer to a structure which contains the number of nodes, the adjacency matrix and a list of visited nodes
-
     int no_cc = 0;
     int iterator_nodes;
 
@@ -39,9 +33,6 @@ int no_connected_components(struct a_graph *graph){
 }
 
 void delete_graph(struct a_graph *graph){
-        ///\brief a function that deallocates memory used for storing the graph
-        ///\param struct a_graph *graph is a pointer to a structure which contains the number of nodes, the adjacency matrix and a list of visited nodes
-
     free(graph->adj_matrix);
     free(graph->is_visited);
     free(graph);
@@ -49,9 +40,6 @@ void delete_graph(struct a_graph *graph){
 
 int main()
 {
-     ///\fn int main()
-     ///\var *graph is a pointer to a structure which contains the number of nodes, the adjacency matrix and a list of visited nodes
-
     struct a_graph *graph;
 
     graph = malloc(sizeof(struct a_graph));
