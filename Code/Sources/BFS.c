@@ -1,13 +1,7 @@
-///\file BFS.c
 #include <stdlib.h>
 #include "graph_traversals.h"
 
 void BFS(struct a_graph *graph, int start_node){
-    ///\fn void BFS(struct a_graph *graph, int start_node)
-    ///\brief a function that apply breadth first search on an arbitrary node called start_node
-    ///\param *graph a pointer to a structure which contains the number of nodes, the adjacency matrix and a list of visited nodes
-    ///\param start_node is an arbitrary node
-
     int *queue;
     int front;
     int back;
