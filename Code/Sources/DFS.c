@@ -1,13 +1,7 @@
-///\file DFS.c
 #include <stdlib.h>
 #include "graph_traversals.h"
 
 void DFS(struct a_graph *graph, int start_node){
-    ///\fn void DFS(struct a_graph *graph, int start_node)
-    ///\brief a function that apply depth first search on an arbitrary node called start_node
-    ///\param *graph a pointer to a structure which contains the number of nodes, the adjacency matrix and a list of visited nodes
-    ///\param start_node is an arbitrary node
-
     int *stack;
     int no_elements_stack;
     int iterator_nodes;
